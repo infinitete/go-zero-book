@@ -1,0 +1,20 @@
+type (
+	SearchReq {
+		Name string `form:"name"`
+	}
+
+	SearchReply {
+		Name  string `json:"name"`
+		Count int    `json:"count"`
+	}
+)
+
+@server (
+	jwt: Auth
+	middleware: Example
+)
+
+service search-api {
+	@handler search
+	get /search/do (SearchReq) returns (SearchReply)
+}

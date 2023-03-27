@@ -6,7 +6,7 @@ Mysql:
   DataSource: root:123456@tcp(10.211.55.7)/go_zero_demo?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 
 CacheRedis:
-  - Host: 10.211.55.7
+  - Host: 10.211.55.7:6379
     Pass: z123456
     Type: node
 
